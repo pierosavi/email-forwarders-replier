@@ -1,2 +1,3 @@
-<li><a href="/anonaddy">Anonaddy</a></li>
-<li><a href="/duckduckgo">Duckduckgo</a></li>
+Hello.
+<br />
+Click one of the services above to generate the reply email.
