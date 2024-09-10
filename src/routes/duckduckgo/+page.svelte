@@ -4,7 +4,7 @@
 	let emailTo = '';
 	// support@google.com becomes support_at_google.com
 
-	$: replyTo = (emailTo.replace('@', '_at_')) + ('_' + emailFrom);
+	$: replyTo = emailTo.replace('@', '_at_') + ('_' + emailFrom);
 </script>
 
 <label for="email_from">Email From</label>
@@ -13,8 +13,14 @@
 <input id="email_to" type="text" placeholder="Email To" bind:value={emailTo} /><br />
 
 {#if emailFrom && emailTo}
-<input transition:fly type="button" class="button secondary" value="Copy address to clipboard" on:click={() => {
-	navigator.clipboard.writeText(replyTo);
-}} />
-<a transition:fly class="button primary" href="mailto:{ replyTo }">Send Email to: {replyTo}</a>
+	<input
+		transition:fly
+		type="button"
+		class="button secondary"
+		value="Copy address to clipboard"
+		on:click={() => {
+			navigator.clipboard.writeText(replyTo);
+		}}
+	/>
+	<a transition:fly class="button primary" href="mailto:{replyTo}">Send Email to: {replyTo}</a>
 {/if}
