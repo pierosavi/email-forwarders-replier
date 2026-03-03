@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
+	import { generateReplyAddress } from '$lib/anonaddy.js';
 	let emailFrom = '';
 	let emailTo = '';
 
-	$: splitEmailFrom = emailFrom.split('@');
-	$: replyTo = splitEmailFrom[0] + '+' + emailTo.replace('@', '=') + '@' + splitEmailFrom[1];
+	$: replyTo = generateReplyAddress(emailFrom, emailTo);
 </script>
 
 <label for="email_from">Email From</label>

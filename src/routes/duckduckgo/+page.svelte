@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
+	import { generateReplyAddress } from '$lib/duckduckgo.js';
 	let emailFrom = '';
 	let emailTo = '';
-	// support@google.com becomes support_at_google.com
 
-	$: replyTo = emailTo.replace('@', '_at_') + ('_' + emailFrom);
+	$: replyTo = generateReplyAddress(emailFrom, emailTo);
 </script>
 
 <label for="email_from">Email From</label>
