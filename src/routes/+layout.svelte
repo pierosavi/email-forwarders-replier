@@ -14,7 +14,7 @@
 		</div>
 	</nav>
 	<br />
-	<div class="text-center">
+	<div>
 		<slot />
 	</div>
 </div>
