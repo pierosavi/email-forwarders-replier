@@ -1,14 +1,15 @@
 <script>
 	import 'chota/dist/chota.min.css';
+	import { resolve } from '$app/paths';
 </script>
 
 <div class="container">
 	<nav class="nav">
 		<div class="nav-center">
-			<a class="brand" href="/">Home</a>
+			<a class="brand" href={resolve('/')}>Home</a>
 			<div class="tabs">
-				<a href="/anonaddy">Anonaddy</a>
-				<a href="/duckduckgo">DuckDuckGo</a>
+				<a href={resolve('/anonaddy')}>Anonaddy</a>
+				<a href={resolve('/duckduckgo')}>DuckDuckGo</a>
 			</div>
 		</div>
 	</nav>
