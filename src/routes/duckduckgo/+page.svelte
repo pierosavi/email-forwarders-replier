@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import { generateReplyAddress } from '$lib/duckduckgo.js';
+	import { generateReplyAddress } from '#lib/duckduckgo.js';
 	let emailFrom = '';
 	let emailTo = '';
 
