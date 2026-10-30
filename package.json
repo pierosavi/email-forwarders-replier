@@ -30,20 +30,18 @@
     "playwright": "^1.58.2",
     "svelte": "^5.55.7",
     "svelte-check": "^4.4.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0",
+    "typescript": "~6.0.0",
+    "typescript-eslint": "^8.72.1",
     "vite": "^8.3.4",
     "vitest": "^4.1.11",
     "vitest-browser-svelte": "^2.0.2",
     "wrangler": "^4.154.0"
   },
   "type": "module",
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  },
   "dependencies": {
     "chota": "^0.9.2"
-  },
-  "overrides": {
-    "@sveltejs/kit": {
-      "cookie": "^0.7.2"
-    }
   }
 }
